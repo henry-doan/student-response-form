@@ -1,0 +1,15 @@
+<div class="center-align container form-style">
+	<h1 class="center">Question Form</h1>
+	<%= form_for @student do |f| %>
+		<div class="input-field col s6 offset-s4">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</div>
+
+   <div class="input-field col s6 offset-s4">
+			<%= f.label :question %>
+			<%= f.text_field :question, :required => true %>
+		</div>
+    <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+	<% end %>
+</div>

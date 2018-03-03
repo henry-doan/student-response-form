@@ -1,0 +1,26 @@
+<h1 class="center">Form Submissions</h1>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Questions</th>
+        <th>Answered</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @students.each do |s| %>
+        <tr class='student-question' data-id=<%= s.id %> >
+          <td><%= s.name %></td>
+          <td><%= s.question %></td>
+          <td>
+            <input type="checkbox" id=<%= s.id %> />
+            <label for=<%= s.id %>>Answered</label>
+          </td>
+          <td><button class="btn-floating waves-effect red" id="delete-question"><i class="material-icons">clear</i></button></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
